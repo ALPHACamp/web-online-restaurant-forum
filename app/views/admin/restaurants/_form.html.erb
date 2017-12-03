@@ -40,6 +40,10 @@
 
       <div class="form-group">
         <%= f.label :image, "Photo" %>
+        <!-- 這裡的if跟下面的code是一樣的，這是ruby整潔的寫法。 -->
+        <!-- if @restaurant.image? -->
+        <!--   image_tag @restaurant.image, width: '300px' -->
+        <!-- end -->
         <%= image_tag @restaurant.image, width: '300px' if @restaurant.image? %>
         <%= f.file_field :image %>
       </div>
