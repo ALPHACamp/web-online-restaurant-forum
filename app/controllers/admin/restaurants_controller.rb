@@ -5,6 +5,7 @@ class Admin::RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
+    # page 可以讓我們用來作分頁的功能，params[:page]是頁碼，per是每頁的資料量。
     @restaurants = Restaurant.page(params[:page]).per(10)
   end
 
